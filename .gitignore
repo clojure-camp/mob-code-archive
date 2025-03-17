@@ -1,0 +1,8 @@
+/target
+/checkouts
+/.lein-*
+/.nrepl-port
+/.calva
+/.clj-kondo
+/.lsp
+/.portal

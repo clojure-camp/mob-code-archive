@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Quantum Entanglement in Particle Physics",
+    "authors": ["Alice Smith"],
+    "citation_count": 7
+  },
+  {
+    "title": "Advances in Nanotechnology",
+    "authors": ["Bob Johnson", "Alice Smith"],
+    "citation_count": 3
+  },
+  {
+    "title": "The Role of AI in Modern Medicine",
+    "authors": ["Charlie Brown", "Alice Smith", "David Wilson"],
+    "citation_count": 10
+  },
+  {
+    "title": "Climate Change and Global Warming",
+    "authors": ["Eve Davis", "Charlie Brown"],
+    "citation_count": 2
+  },
+  {
+    "title": "Renewable Energy Sources",
+    "authors": ["Alice Smith", "David Wilson"],
+    "citation_count": 6
+  },
+  {
+    "title": "Genetic Engineering and CRISPR",
+    "authors": ["Bob Johnson"],
+    "citation_count": 5
+  },
+  {
+    "title": "Black Hole Thermodynamics",
+    "authors": ["David Wilson", "Eve Davis"],
+    "citation_count": 1
+  },
+  {
+    "title": "Astrobiology: Life in the Universe",
+    "authors": ["Charlie Brown"],
+    "citation_count": 8
+  },
+  {
+    "title": "Artificial Neural Networks",
+    "authors": ["Alice Smith", "Bob Johnson"],
+    "citation_count": 4
+  },
+  {
+    "title": "The Future of Quantum Computing",
+    "authors": ["Charlie Brown", "David Wilson", "Eve Davis"],
+    "citation_count": 9
+  },
+  {
+    "title": "Materials Science Innovations",
+    "authors": ["Eve Davis"],
+    "citation_count": 0
+  },
+  {
+    "title": "Deep Learning and Big Data",
+    "authors": ["Alice Smith", "Charlie Brown"],
+    "citation_count": 3
+  },
+  {
+    "title": "Biotechnology in Agriculture",
+    "authors": ["Bob Johnson", "Eve Davis"],
+    "citation_count": 6
+  },
+  {
+    "title": "Renewable Energy Storage Solutions",
+    "authors": ["David Wilson", "Charlie Brown"],
+    "citation_count": 5
+  },
+  {
+    "title": "The Chemistry of Clean Energy",
+    "authors": ["Alice Smith", "David Wilson"],
+    "citation_count": 2
+  },
+  {
+    "title": "Machine Learning in Genomics",
+    "authors": ["Bob Johnson", "Charlie Brown"],
+    "citation_count": 7
+  },
+  {
+    "title": "Physics of Superconductors",
+    "authors": ["Eve Davis", "Alice Smith", "Bob Johnson"],
+    "citation_count": 4
+  },
+  {
+    "title": "Neuroscience and Brain Mapping",
+    "authors": ["Charlie Brown", "David Wilson"],
+    "citation_count": 1
+  },
+  {
+    "title": "The Impact of Microplastics",
+    "authors": ["Eve Davis"],
+    "citation_count": 9
+  },
+  {
+    "title": "Cybersecurity in the Age of IoT",
+    "authors": ["Bob Johnson", "Alice Smith"],
+    "citation_count": 8
+  }
+]
