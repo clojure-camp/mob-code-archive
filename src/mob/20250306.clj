@@ -47,30 +47,3 @@
  (get sv n))
 
 
-;; something completely different:
-;; a high-level fn that "lifts" a fn, such that it always returns a unique value
-
-(defn make-unique-generator
-  [init-set f]
-  (let [prev-values (atom init-set)]
-    (fn []
-      (loop [attempts 0]
-        (if (< attempts 10000)
-          (let [o (f)]
-            (if (contains? @prev-values o)
-              (recur (inc attempts))
-              (do (swap! prev-values conj o)
-                  o)))
-          (throw (ex-info "too many attempts" {})))))))
-
-(def random-name (make-unique-generator #{}
-                                        (fn []
-                                          (repeatedly 10 #(rand-nth "abcdefghijklmnopqrstuvwxyz")))))
-
-(random-name)
-
-(def random-name-explody (make-unique-generator #{}
-                                        (fn []
-                                          (rand-nth "abc"))))
-
-(random-name-explody)
