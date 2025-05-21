@@ -4,7 +4,7 @@
    [clojure.test.check.generators :as gen]
    [clojure.test.check.properties :as prop]))
 
-;; implementing merge sort
+;; implenting merge-sort
 
 ;;              [  1 2 5 1 6 23 6 3 ]
 ;;                /                \  
@@ -62,17 +62,21 @@
       (merge (merge-sort x)
              (merge-sort y)))))
 
-(merge-sort [5 1 2 6 8 9])
+#_(merge-sort [5 1 2 6 8 9])
 
 (def prop-result-is-equal-input
-  (prop/for-all [x  (gen/vector gen/small-integer)]
+  (prop/for-all [x (gen/vector gen/small-integer)]
                 (= (count x) (count (merge-sort x)))))
-
-(tc/quick-check 100 prop-result-is-equal-input)
+#_(tc/quick-check 100 prop-result-is-equal-input)
 
 (def prop-result-all-ascend
-  (prop/for-all [x  (gen/not-empty (gen/vector gen/small-integer))]
+  (prop/for-all [x (gen/not-empty (gen/vector gen/small-integer))]
                 (apply <= (merge-sort x))))
-(tc/quick-check 100 prop-result-all-ascend)
+#_(tc/quick-check 100 prop-result-all-ascend)
 
-;; TODO: tail-call
+(def prop-result-all-present
+  (prop/for-all [x (gen/not-empty (gen/vector gen/small-integer))]
+                (= (frequencies x) (frequencies (merge-sort x)))))
+#_(tc/quick-check 100 prop-result-all-present)
+
+
