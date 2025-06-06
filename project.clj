@@ -6,5 +6,6 @@
                  [com.hyperfiddle/rcf "20220926-202227"]
                  [org.clojure/test.check "1.1.1"]
                  [criterium "0.4.6"]
+                 [cljfx "1.9.5"]
                  [com.rpl/specter "1.1.4"]]
   :repl-options {:init-ns exercises.core})
