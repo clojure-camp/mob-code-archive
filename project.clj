@@ -8,5 +8,11 @@
                  [hiccup "2.0.0-RC5"]
                  [criterium "0.4.6"]
                  [cljfx "1.9.5"]
-                 [com.rpl/specter "1.1.4"]]
+                 [com.rpl/specter "1.1.4"]
+                 
+                 [com.github.seancorfield/next.jdbc "1.3.1048"]
+                 [org.xerial/sqlite-jdbc "3.47.1.0"]
+                 [com.h2database/h2 "2.3.232"]
+                 [com.github.seancorfield/honeysql "2.7.1310"]
+                 [com.layerware/hugsql "0.5.3"]]
   :repl-options {:init-ns exercises.core})
