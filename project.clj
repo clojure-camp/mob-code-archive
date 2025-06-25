@@ -6,9 +6,11 @@
                  [com.hyperfiddle/rcf "20220926-202227"]
                  [org.clojure/test.check "1.1.1"]
                  [hiccup "2.0.0-RC5"]
+                 [ring/ring-defaults "0.6.0"]
                  [criterium "0.4.6"]
                  [cljfx "1.9.5"]
                  [com.rpl/specter "1.1.4"]
+                 [buddy/buddy-auth "3.0.323"]
                  
                  [com.github.seancorfield/next.jdbc "1.3.1048"]
                  [org.xerial/sqlite-jdbc "3.47.1.0"]
