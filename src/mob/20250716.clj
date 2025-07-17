@@ -22,7 +22,7 @@
 ;; b) construct-strategy(n)
 ;;      => strategy(next-candidate) => true, false   (would need to keep state internally)
 ;; c) strategy(memo, next-candidate) => memo, + true or false    (runner would need to maintain state)
-;;      similar to reduce    
+;;      similar to reduce
 
 ;; choose (c), most functional
 
@@ -35,7 +35,7 @@
 ;; collect all result together
 ;; fn to calculate an average score
 
-(defn strategy-choose10th 
+(defn strategy-choose10th
   [memo next-candidate _candidate-count commit]
   (if (nil? memo)
     1
@@ -43,7 +43,7 @@
       (inc memo)
       (commit next-candidate))))
 
-(defn strategy-choose10% 
+(defn strategy-choose10%
   [memo next-candidate candidate-count commit]
   (if (nil? memo)
     1
@@ -67,10 +67,10 @@
                             next-candidate
                             current))))
       {:threshold (:best memo)})
-    
+
     ;; all below in "threshold phase"
 
-    (< (:threshold memo) next-candidate) 
+    (< (:threshold memo) next-candidate)
     (commit next-candidate)
 
     :else
@@ -81,16 +81,32 @@
 
 #_(average [1 2 3 4 101])
 
-(defn run-strategy [strategy] 
+(defn run-strategy-broken [strategy]
   (let [n 1000
         candidates (shuffle (range 1 (+ n 1)))
         result (reduce (fn [memo candidate]
                          (strategy memo candidate n reduced))
                        nil
                        candidates)]
+    ;; reduced? doesn't work, because reduce unwraps it
+    ;; have to "reimplement" our own wrapper below
     (if (reduced? result)
       result
       (last candidates))))
+
+(defn run-strategy [strategy]
+  (let [n 100
+        candidates (shuffle (range 1 (+ n 1)))
+        result (reduce (fn [memo candidate]
+                         (let [result (strategy memo candidate n (fn [x]
+                                                                   {::commit x}))]
+                           (if (::commit result)
+                             (reduced result)
+                             result)))
+                       nil
+                       (butlast candidates))]
+    (or (::commit result)
+        (last candidates))))
 
 (defn evaluate-strategy [strategy]
   (double (average
@@ -102,6 +118,7 @@
 #_(evaluate-strategy strategy-see10%-then-pick-next-highest)
 
 #_(run-strategy strategy-see10%-then-pick-next-highest)
+
 ;; homework:
-;;    is this above working correctly?
+;;    try implementing the other strategies
 ;;    consider refactoring to one of the other design choices (above)
