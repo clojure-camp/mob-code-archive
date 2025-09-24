@@ -11,6 +11,7 @@
                  [cljfx "1.9.5"]
                  [com.rpl/specter "1.1.4"]
                  [buddy/buddy-auth "3.0.323"]
+                 [datascript "1.7.5"]
                  
                  [com.github.seancorfield/next.jdbc "1.3.1048"]
                  [org.xerial/sqlite-jdbc "3.47.1.0"]
